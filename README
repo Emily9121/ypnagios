@@ -1,0 +1,29 @@
+YayPonies iTunes Nagios check scripts
+-------------------------------------
+YP tools are provided as it is, there might or might not
+be a README, there might or might not be a licences,
+we warranty absolutely nothing, it does work for us.
+-------------------------------------
+
+usage:
+
+- check_itunes : check the number of episode released, will report a critical problem to nagios if the number
+given in argument doesn't match with the one on iTunes
+	
+	Example:
+	./check_itunes 9001
+	Expected was 9001 EP, found 2 EP
+	./check_itunes 2   
+	No new ponies :/
+
+- check_comics : check the result of an iTunes search, first argument is the comic serie (FiM for main serie, FF for Friends Forever, A for Annual), second argument should be the comic number.
+
+	Example:
+	./check_comics FiM 34
+	SUCCESS: My Little Pony: Friendship is Magic #34 - Avaialble for Purchase! :)
+	./check_comics FiM 35
+	ERROR: My Little Pony: Friendship is Magic #35 - Not Found! :/
+	./check_comics A 2015
+	ERROR: My Little Pony Annual 2015 - Not Found! :/
+	./check_comics A 2014
+	SUCCESS: My Little Pony Annual 2014 - Avaialble for Purchase! :)
