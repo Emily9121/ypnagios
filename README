@@ -27,3 +27,7 @@ given in argument doesn't match with the one on iTunes
 	ERROR: My Little Pony Annual 2015 - Not Found! :/
 	./check_comics A 2014
 	SUCCESS: My Little Pony Annual 2014 - Avaialble for Purchase! :)
+
+- check_led : It was never used for pony, but I needed to check the color of a led, if it wasn't red, I needed nagios to
+warn me, this script download an image (in my case, it was on a IP camera built with an old android phone), take 1 pixel and analyse it to see if it's red or not.
+
